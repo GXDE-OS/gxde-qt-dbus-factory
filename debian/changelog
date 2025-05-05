@@ -1,6 +1,6 @@
-dde-qt-dbus-factory (6.0.0-1) unstable; urgency=medium
+dde-qt-dbus-factory (6.1.0~gxde1) unstable; urgency=medium
 
-  * update
+  * update version to override debian 13
 
  -- Deepin Packages Builder <packages@deepin.com>  Thu, 01 Dec 2022 17:34:24 +0800
 
