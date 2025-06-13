@@ -16,7 +16,7 @@ Homepage: https://github.com/linuxdeepin/dde-qt-dbus-factory
 
 Package: libgxframeworkdbus2
 Provides: libdframeworkdbus2(=${binary:Version})
-Conflicts: libdframeworkdbus2
+Conflicts: libdframeworkdbus2 (>> 6.1.0~gxde3)
 Replaces: libdframeworkdbus2
 Architecture: any
 Section: libs

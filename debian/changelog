@@ -1,3 +1,10 @@
+dde-qt-dbus-factory (6.1.0~gxde4) UNRELEASED; urgency=medium
+
+  * Non-maintainer upload.
+  * 修改 Conflicts 版本
+
+ -- gfdgd_xi <3025613752@qq.com>  Fri, 13 Jun 2025 22:31:47 +0800
+
 dde-qt-dbus-factory (6.1.0~gxde3) unstable; urgency=medium
 
   * update version to override debian 13
