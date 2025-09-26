@@ -3,4 +3,4 @@ build*/
 .vscode/*
 */generated/
 bin/
-
+CMakeLists.txt.user
