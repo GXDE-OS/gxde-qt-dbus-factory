@@ -1,10 +1,11 @@
-dde-qt-dbus-factory (6.1.0~gxde5) UNRELEASED; urgency=medium
+dde-qt-dbus-factory (6.1.0~gxde6) UNRELEASED; urgency=medium
 
   * Non-maintainer upload.
   * 修改 Conflicts 版本
   * 支持设置不合并任务栏图标
+  * 新增 top_gxde_daemon_dock.h
 
- -- gfdgd_xi <3025613752@qq.com>  Fri, 20 Feb 2026 12:06:18 +0800
+ -- gfdgd_xi <3025613752@qq.com>  Mon, 20 Jul 2026 09:30:13 +0800
 
 dde-qt-dbus-factory (6.1.0~gxde3) unstable; urgency=medium
 
