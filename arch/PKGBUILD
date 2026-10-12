@@ -1,0 +1,36 @@
+# Maintainer: CharOfString <root@charofstring.cc>
+pkgname=deepin-qt-dbus-factory-git
+pkgver=6.1.0.gxde6
+pkgrel=1
+pkgdesc='Qt DBus interface library for GXDE/Deepin software (libdframeworkdbus)'
+arch=('x86_64' 'aarch64')
+url="https://github.com/GXDE-OS/gxde-qt-dbus-factory"
+# libdframeworkdbus/qtdbusextended 是 LGPL，其余为 GPL
+# libdframeworkdbus/qtdbusextended is LGPL, everything else is GPL.
+license=('GPL-3.0-or-later' 'LGPL-2.1-or-later')
+depends=('qt5-base' 'libgcc' 'libstdc++' 'glibc')
+makedepends=('git' 'python')
+provides=("deepin-qt-dbus-factory=$pkgver")
+conflicts=('deepin-qt-dbus-factory')
+source=()
+sha512sums=()
+
+# 直接使用 PKGBUILD 所在的 git 仓库作为源码 ・ Build from the git checkout this PKGBUILD lives in.
+_srcroot() {
+  git -C "$startdir" rev-parse --show-toplevel
+}
+
+build() {
+  mkdir -p build
+  cd build
+  qmake-qt5 "$(_srcroot)" \
+    LIB_INSTALL_DIR=/usr/lib \
+    QMAKE_CFLAGS_RELEASE="$CFLAGS" \
+    QMAKE_CXXFLAGS_RELEASE="$CXXFLAGS" \
+    QMAKE_LFLAGS_RELEASE="$LDFLAGS"
+  make
+}
+
+package() {
+  make -C build INSTALL_ROOT="$pkgdir" install
+}
