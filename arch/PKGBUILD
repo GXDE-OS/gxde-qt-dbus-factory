@@ -1,5 +1,5 @@
 # Maintainer: CharOfString <root@charofstring.cc>
-pkgname=deepin-qt-dbus-factory-git
+pkgname=gxde-deepin-qt-dbus-factory
 pkgver=6.1.0.gxde6
 pkgrel=1
 pkgdesc='Qt DBus interface library for GXDE/Deepin software (libdframeworkdbus)'
@@ -10,8 +10,9 @@ url="https://github.com/GXDE-OS/gxde-qt-dbus-factory"
 license=('GPL-3.0-or-later' 'LGPL-2.1-or-later')
 depends=('qt5-base' 'libgcc' 'libstdc++' 'glibc')
 makedepends=('git' 'python')
-provides=("deepin-qt-dbus-factory=$pkgver")
-conflicts=('deepin-qt-dbus-factory')
+provides=("deepin-qt-dbus-factory=$pkgver" "deepin-qt-dbus-factory-git=$pkgver")
+conflicts=('deepin-qt-dbus-factory' 'deepin-qt-dbus-factory-git')
+replaces=('deepin-qt-dbus-factory-git')
 source=()
 sha512sums=()
 
